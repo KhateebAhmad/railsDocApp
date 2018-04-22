@@ -1,0 +1,16 @@
+<h1>Edit Patient Detail</h1>
+
+<%= form_for @patient, :url =>{:action => "update", :id =>@patient} do |f| %>
+
+<p>Name: <%= f.text_field 'name' %></p>
+<p>Date of Birth: <%= f.date_field  'dateofbirth' %></p>
+<p>Address: <%= f.text_area  'address' %></p>
+<p>Phone Number: <%= f.number_field  'phonenumber' %></p>
+<p>Injury: <%= f.text_area  'injury' %></p>
+<p>Request Scan: <%= f.text_field  'requestscan' %></p>
+<p>Type of Scan: <%= f.text_field  'typeofscan' %></p>
+
+<%= f.submit "Save changes" %>
+<% end %>
+
+<%= link_to 'Back', {:action => 'list' } %>

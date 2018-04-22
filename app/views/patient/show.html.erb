@@ -1,0 +1,16 @@
+<h1><%= @patient.name %></h1>
+
+<p>
+   <strong>Date of Birth: </strong> $<%= @patient.dateofbirth %><br />
+   <strong>Address :</strong> <%= @patient.address %><br />
+   <strong>Phone Number :</strong> <%= @patient.phonenumber %><br />
+   <strong>Injury :</strong> <%= @patient.injury %><br />
+   <strong>Request Scan :</strong> <%= @patient.requestscan %><br />
+   <strong>Type of Scan :</strong> <%= @patient.typeofscan %><br />
+
+   <strong>Record creation date:</strong> <%= @patient.created_at %><br />
+</p>
+
+<hr />
+
+<%= link_to 'Back', {:action => 'list'} %>

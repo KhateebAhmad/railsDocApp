@@ -1,0 +1,30 @@
+<h1>Add new patient</h1>
+
+<%= form_tag :action => 'create' do %>
+
+
+<p><label for = "patient_name">Name</label>:
+<%= text_field 'patients', 'name' %></p>
+
+<p><label for = "patient_dateofbirth">Date of Birth</label>:
+<%= date_field 'patients', 'dateofbirth' %></p>
+
+<p><label for = "patient_address">Address</label><br/>
+<%= text_area 'patients', 'address' %></p>
+
+<p><label for = "patient_phonenumber">Phone Number</label><br/>
+<%= number_field 'patients', 'phonenumber' %></p>
+
+<p><label for = "patient_injury">Injury</label><br/>
+<%= text_area 'patients', 'injury' %></p>
+
+<p><label for = "patient_requestscan">Request Scan</label>:
+<%= text_field 'patients', 'requestscan' %></p>
+
+<p><label for = "patient_typeofscan">Type of scan</label>:
+<%= text_field 'patients', 'typeofscan' %></p>
+
+<%= submit_tag "Create" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'list'} %>
