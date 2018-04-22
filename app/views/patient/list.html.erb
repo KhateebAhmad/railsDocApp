@@ -1,6 +1,5 @@
 <%= search_form_for @search do |f| %>
 
-  # Search if the name field contains...
   <%= f.label :name_cont %>
   <%= f.search_field :name_cont %>
 
@@ -16,28 +15,28 @@
 
 <table class="table">
   <tr>
-    <th >Name</th>
-    <th >Date of Birth</th>
-    <th >Address</th>
-    <th >Phone Number</th>
-    <th >Issue/Injury</th>
-    <th >Scan Requested</th>
-    <th >Type of Scan</th>
-    <th ></th>
-    <th ></th>
+    <th colspan="5">Name</th>
+    <th colspan="4">Date of Birth</th>
+    <th colspan="3">Address</th>
+    <th colspan="3">Phone Number</th>
+    <th colspan="3">Issue/Injury</th>
+    <th colspan="3">Scan Requested</th>
+    <th colspan="2">Type of Scan</th>
+    <th colspan="2"></th>
+    <th colspan="2"></th>
 
   </tr>
   <% @patients.each do |patient| %>
   <tr>
-    <td ><%= link_to patient.name, {:action => 'show', :id => patient.id} -%></td>
-    <td ><%= patient.dateofbirth -%></td>
-    <td ><%= patient.address -%></td>
-    <td ><%= patient.phonenumber -%></td>
-    <td><%= patient.injury -%></td>
-    <td><%= patient.requestscan -%></td>
-    <td><%= patient.typeofscan -%></td>
-    <td><%= link_to 'Edit', {:action => "edit", :id => patient.id} %></td>
-    <td><%= link_to "Delete", {:action => 'delete', :id => patient.id}, :confirm => "Are you sure you want to delete this record?" %></td>
+    <td colspan="5"><%= link_to patient.name, {:action => 'show', :id => patient.id} -%></td>
+    <td colspan="4"><%= patient.dateofbirth -%></td>
+    <td colspan="3"><%= patient.address -%></td>
+    <td colspan="2"><%= patient.phonenumber -%></td>
+    <td colspan="2"><%= patient.injury -%></td>
+    <td colspan="2"><%= patient.requestscan -%></td>
+    <td colspan="2"><%= patient.typeofscan -%></td>
+    <td colspan="2"><%= link_to 'Edit', {:action => "edit", :id => patient.id} %></td>
+    <td colspan="2"><%= link_to "Delete", {:action => 'delete', :id => patient.id}, :confirm => "Are you sure you want to delete this record?" %></td>
   </tr>
   <% end %>
 </table>
