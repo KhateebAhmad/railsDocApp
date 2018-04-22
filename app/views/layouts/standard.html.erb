@@ -10,20 +10,23 @@
    </head>
 
    <body id = "library">
-      <div id = "container">
-
+      <div id="main-container" class="container-fluid">
+        <div class="row">
          <div id = "header">
             <h1>Smart Health Care - Patient Management System</h1>
-
          </div>
 
-         <div id = "content">
+         <div id = "sidebar" class="col-xs-2">
+
+
+         <div id = "content" class="col-xs-12">
             <%= yield -%>
             <%= link_to 'Homepage', {:action => 'index' } %>
          </div>
 
-         <div id = "sidebar"></div>
 
+         </div>
+        </div>
       </div>
    </body>
 
