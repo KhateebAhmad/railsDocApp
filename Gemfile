@@ -59,5 +59,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #gem 'sqlite3'
 gem 'pg'                # pg gem for postgres
-gem 'rails_12factor'    # heroku needs this
+#gem 'rails_12factor'    # heroku needs this
 
