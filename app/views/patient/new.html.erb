@@ -1,19 +1,52 @@
-<h1>Add new patient</h1>
+<br>
+<br>
+<h3>Add new patient</h3>
 
-<%= form_tag :action => 'create' do %>
+<br>
 
+<%= form_tag :action => 'create', :class => 'form-horizontal' do %>
 
-<p><label for = "patient_name">Name</label>:
-<%= text_field 'patients', 'name' %></p>
+<div class="form-group">
+<label for = "patient_name" class="control-label col-sm-1">Name:</label>
+<div class="col-sm-3">
+<%= text_field 'patients', 'name', :class => 'form-control' %>
+</div>
+</div>
 
-<p><label for = "patient_dateofbirth">Date of Birth</label>:
-<%= date_field 'patients', 'dateofbirth' %></p>
+<br>
+<br>
+<br>
 
-<p><label for = "patient_address">Address</label><br/>
-<%= text_area 'patients', 'address' %></p>
+<div class="form-group">
+<label for = "patient_dateofbirth" class="control-label col-sm-1">Date of Birth:</label>
+<div class="col-sm-3">
+<%= date_field 'patients', 'dateofbirth', :class => 'form-control' %>
+</div>
+</div>
 
-<p><label for = "patient_phonenumber">Phone Number</label><br/>
-<%= number_field 'patients', 'phonenumber' %></p>
+<br>
+<br>
+
+<div class="form-group">
+<label for = "patient_address" class="control-label col-sm-1">Address:</label>
+<div class="col-sm-3">
+<%= text_area 'patients', 'address', :class => 'form-control' %>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="form-group">
+<label for = "patient_phonenumber" class="control-label col-sm-1">Phone Number:</label>
+<div class="col-sm-3">
+<%= number_field 'patients', 'phonenumber', :class => 'form-control' %>
+</div>
+</div>
+
+<br>
+<br>
 
 <p><label for = "patient_injury">Injury</label><br/>
 <%= text_area 'patients', 'injury' %></p>
@@ -24,7 +57,6 @@
 <p><label for = "patient_typeofscan">Type of scan</label>:
 <%= text_field 'patients', 'typeofscan' %></p>
 
-<%= submit_tag "Create" %>
+<%= submit_tag "Create"%>
 
 <% end -%>
-<%= link_to 'Back', {:action => 'list'} %>
