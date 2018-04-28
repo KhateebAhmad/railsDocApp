@@ -1,10 +1,13 @@
-class PatientController < ApplicationController
+class PatientsController < ApplicationController
 before_action :authenticate_user!
 layout 'standard'
 
     def index
         @search = Patient.search(params[:q])
         @patients = @search.result
+        if params[:q].blank?
+            @patients = nil
+        end
     end
 
     def list
