@@ -2,15 +2,12 @@ class PatientController < ApplicationController
 layout 'standard'
 
     def index
+        @search = Patient.search(params[:q])
+        @patients = @search.result
     end
 
     def list
-        @search = Patient.ransack(params[:q])
-        @patients = @search.result
-
-        if params[:q].blank?
-            @patients = Patient.all
-        end
+        @patients = Patient.all
     end
 
     def show

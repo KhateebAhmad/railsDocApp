@@ -48,15 +48,41 @@
 <br>
 <br>
 
-<p><label for = "patient_injury">Injury</label><br/>
-<%= text_area 'patients', 'injury' %></p>
+<div class="form-group">
+<label for = "patient_injury" class="control-label col-sm-1">Injury:</label>
+<div class="col-sm-3">
+<%= text_area 'patients', 'injury', :class => 'form-control' %>
+</div>
+</div>
 
-<p><label for = "patient_requestscan">Request Scan</label>:
-<%= text_field 'patients', 'requestscan' %></p>
+<br>
+<br>
+<br>
 
-<p><label for = "patient_typeofscan">Type of scan</label>:
-<%= text_field 'patients', 'typeofscan' %></p>
+<div class="form-group">
+<label for = "patient_requestscan" class="control-label col-sm-1">Request Scan:</label>
+<div class="col-sm-3">
+<%= text_field 'patients', 'requestscan', :class => 'form-control' %>
+</div>
+</div>
 
-<%= submit_tag "Create"%>
+<br>
+<br>
+
+<div class="form-group">
+<label for = "patient_typeofscan" class="control-label col-sm-1">Type of scan:</label>
+<div class="col-sm-3">
+<%= text_field 'patients', 'typeofscan', :class => 'form-control' %>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="form-group">
+<div class="col-sm-offset-2 col-sm-10">
+<%= submit_tag "Create", :class => 'btn btn-primary'%>
+</div>
+</div>
 
 <% end -%>
