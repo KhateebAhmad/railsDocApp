@@ -16,6 +16,8 @@
     <th >Issue/Injury</th>
     <th >Scan Requested</th>
     <th >Type of Scan</th>
+    <th >Doctor ID</th>
+    <th >Doctor Contact Email</th>
     <th >Show</th>
     <th >Edit</th>
     <th >Delete</th>
@@ -30,9 +32,13 @@
     <td ><%= patient.injury -%></td>
     <td ><%= patient.requestscan -%></td>
     <td><%= patient.typeofscan -%></td>
+    <td><%= patient.user.id -%></td>
+    <td><%= patient.user.email -%></td>
     <td><%= link_to 'Show', {:action => "show", :id => patient.id}, class: "btn btn-primary" %></td>
-    <td><%= link_to 'Edit', {:action => "edit", :id => patient.id}, class: "btn btn-primary" %></td>
-    <td><%= link_to 'Delete', {:action => 'delete', :id => patient.id}, class: "btn btn-danger", confirm: "Are you sure you want to delete this record?" %></td>
+    <% if patient.user == current_user %>
+        <td><%= link_to 'Edit', {:action => "edit", :id => patient.id}, class: "btn btn-primary" %></td>
+        <td><%= link_to 'Delete', {:action => 'delete', :id => patient.id}, class: "btn btn-danger", confirm: "Are you sure you want to delete this record?" %></td>
+    <% end %>
   </tr>
   <% end %>
 </table>

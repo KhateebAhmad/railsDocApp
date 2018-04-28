@@ -7,6 +7,8 @@
    <strong>Injury :</strong> <%= @patient.injury %><br />
    <strong>Request Scan :</strong> <%= @patient.requestscan %><br />
    <strong>Type of Scan :</strong> <%= @patient.typeofscan %><br />
+   <strong>Doctor ID :</strong> <%= @patient.user.id %><br />
+   <strong>Doctor Contact Email :</strong> <%= @patient.user.email %><br />
 
    <strong>Record creation date:</strong> <%= @patient.created_at %><br />
 </p>
