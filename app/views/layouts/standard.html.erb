@@ -13,7 +13,7 @@
       <div id="main-container" class="container-fluid">
         <div class="row">
          <div id = "header">
-            <h1 class="bg-primary">Smart Health Care - Patient Management System</h1>
+            <h1 class="bg-primary text-center">Smart Health Care - Patient Management System</h1>
          </div>
 
          <div id = "sidebar">
@@ -21,21 +21,25 @@
 
          <div id = "content">
          <ul class="nav navbar-nav">
-               <li><%= link_to 'Homepage', {:action => 'index' } %></li>
-               <li><%= link_to "Add new Patients", {:action => 'new' }%></li>
-               <li><%= link_to "List all Patients", {:action => 'list' }%></li>
+
+               <li><%= link_to 'Homepage', {:action => 'index' }, :class => 'btn btn-primary navbar-btn' %></li>
+               <li><%= link_to "Add new Patients", {:action => 'new' }, :class => 'btn btn-primary navbar-btn' %></li>
+               <li><%= link_to "List all Patients", {:action => 'list' }, :class => 'btn btn-primary navbar-btn' %></li>
+         </ul>
+         <ul class="nav navbar-nav navbar-right">
                <% if user_signed_in? %>
                  <li>
-                    <%= link_to('Edit User Profile', edit_user_registration_path) %>
+                    <%= link_to('Edit User Profile', edit_user_registration_path, :class => 'btn btn-primary navbar-btn') %>
                  </li>
                  <li>
-                    <%= link_to('Logout', destroy_user_session_path) %>
+                    <%= link_to('Logout', destroy_user_session_path, :class => 'btn btn-primary navbar-btn') %>
                  </li>
                <% else %>
                  <li>
-                 <%= link_to('Login', new_user_session_path)  %>
+                 <%= link_to('Login', new_user_session_path, :class => 'btn btn-primary navbar-btn')  %>
                  </li>
                <% end %>
+
              </ul>
             <%= yield -%>
 
