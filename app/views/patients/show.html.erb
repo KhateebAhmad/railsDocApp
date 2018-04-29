@@ -1,4 +1,12 @@
-<h1><%= @patient.name %></h1>
+<br>
+<br>
+<h2 class="text-center">View patient details</h2>
+
+<br>
+<br>
+
+<div class="container center_div">
+<h3><%= @patient.name %></h3>
 
 <p>
    <strong>Date of Birth: </strong> $<%= @patient.dateofbirth %><br />
@@ -14,6 +22,7 @@
    <strong>Record creation date:</strong> <%= @patient.created_at %><br />
 </p>
 
-<hr />
+<hr/>
+</div>
 
 <%= link_to 'Back', {:action => 'list'}, class: "btn btn-primary" %>

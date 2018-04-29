@@ -1,13 +1,13 @@
 <br>
 <br>
-<h3>Add new patient</h3>
+<h2 class="text-center">Add new patient</h2>
 
 <br>
-
+<div class="container center_div">
 <%= form_tag :action => 'create', :class => 'form-horizontal' do %>
 
 <div class="form-group">
-<label for = "patient_name" class="control-label col-sm-1">Name:</label>
+<label for = "patient_name" class="control-label col-sm-2">Name:</label>
 <div class="col-sm-3">
 <%= text_field 'patients', 'name', :class => 'form-control' %>
 </div>
@@ -18,7 +18,7 @@
 <br>
 
 <div class="form-group">
-<label for = "patient_dateofbirth" class="control-label col-sm-1">Date of Birth:</label>
+<label for = "patient_dateofbirth" class="control-label col-sm-2">Date of Birth:</label>
 <div class="col-sm-3">
 <%= date_field 'patients', 'dateofbirth', :class => 'form-control' %>
 </div>
@@ -28,7 +28,7 @@
 <br>
 
 <div class="form-group">
-<label for = "patient_address" class="control-label col-sm-1">Address:</label>
+<label for = "patient_address" class="control-label col-sm-2">Address:</label>
 <div class="col-sm-3">
 <%= text_area 'patients', 'address', :class => 'form-control' %>
 </div>
@@ -39,7 +39,7 @@
 <br>
 
 <div class="form-group">
-<label for = "patient_phonenumber" class="control-label col-sm-1">Phone Number:</label>
+<label for = "patient_phonenumber" class="control-label col-sm-2">Phone Number:</label>
 <div class="col-sm-3">
 <%= number_field 'patients', 'phonenumber', :class => 'form-control' %>
 </div>
@@ -49,7 +49,7 @@
 <br>
 
 <div class="form-group">
-<label for = "patient_injury" class="control-label col-sm-1">Injury:</label>
+<label for = "patient_injury" class="control-label col-sm-2">Injury:</label>
 <div class="col-sm-3">
 <%= text_area 'patients', 'injury', :class => 'form-control' %>
 </div>
@@ -60,7 +60,7 @@
 <br>
 
 <div class="form-group">
-<label for = "patient_requestscan" class="control-label col-sm-1">Request Scan:</label>
+<label for = "patient_requestscan" class="control-label col-sm-2">Request Scan:</label>
 <div class="col-sm-3">
 <%= text_field 'patients', 'requestscan', :class => 'form-control' %>
 </div>
@@ -70,7 +70,7 @@
 <br>
 
 <div class="form-group">
-<label for = "patient_typeofscan" class="control-label col-sm-1">Type of scan:</label>
+<label for = "patient_typeofscan" class="control-label col-sm-2">Type of scan:</label>
 <div class="col-sm-3">
 <%= text_field 'patients', 'typeofscan', :class => 'form-control' %>
 </div>
@@ -80,7 +80,7 @@
 <br>
 
 <div class="form-group">
-<label for = "patient_appointmentdate" class="control-label col-sm-1">Appointment Date:</label>
+<label for = "patient_appointmentdate" class="control-label col-sm-2">Appointment Date:</label>
 <div class="col-sm-3">
 <%= date_select 'patients', 'appointmentdate', :class => 'form-control' %>
 </div>
@@ -90,7 +90,7 @@
 <br>
 
 <div class="form-group">
-<label for = "patient_appointmenttime" class="control-label col-sm-1">Appointment Time:</label>
+<label for = "patient_appointmenttime" class="control-label col-sm-2">Appointment Time:</label>
 <div class="col-sm-3">
 <%= time_select 'patients', 'appointmenttime', :class => 'form-control' %>
 </div>
@@ -106,3 +106,4 @@
 </div>
 
 <% end -%>
+</div>

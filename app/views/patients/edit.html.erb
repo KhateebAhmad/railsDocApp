@@ -1,19 +1,118 @@
-<h1>Edit Patient Detail</h1>
+<br>
+<br>
+<h2 class="text-center">Edit patient details</h2>
 
+<br>
+<div class="container center_div">
 <%= form_for @patient, :url =>{:action => "update", :id =>@patient} do |f| %>
 
-<p>Name: <%= f.text_field 'name' %></p>
-<p>Date of Birth: <%= f.date_field  'dateofbirth' %></p>
-<p>Address: <%= f.text_area  'address' %></p>
-<p>Phone Number: <%= f.number_field  'phonenumber' %></p>
-<p>Injury: <%= f.text_area  'injury' %></p>
-<p>Request Scan: <%= f.text_field  'requestscan' %></p>
-<p>Type of Scan: <%= f.text_field  'typeofscan' %></p>
-<p>Appointment Date: <%= f.date_select  'appointmentdate' %></p>
-<p>Appointment Time: <%= f.time_select  'appointmenttime' %></p>
+
+<div class="form-group">
+<label for = "patient_name" class="control-label col-sm-2">Name:</label>
+<div class="col-sm-3">
+<%= f.text_field 'name', :class => 'form-control' %>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="form-group">
+<label for = "patient_dateofbirth" class="control-label col-sm-2">Date of Birth:</label>
+<div class="col-sm-3">
+<%= f.date_field  'dateofbirth', :class => 'form-control' %>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="form-group">
+<label for = "patient_address" class="control-label col-sm-2">Address:</label>
+<div class="col-sm-3">
+<%= f.text_area  'address', :class => 'form-control' %>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="form-group">
+<label for = "patient_phonenumber" class="control-label col-sm-2">Phone Number:</label>
+<div class="col-sm-3">
+<%= f.number_field  'phonenumber', :class => 'form-control' %>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="form-group">
+<label for = "patient_injury" class="control-label col-sm-2">Injury:</label>
+<div class="col-sm-3">
+<%= f.text_area  'injury', :class => 'form-control' %>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="form-group">
+<label for = "patient_requestscan" class="control-label col-sm-2">Request Scan:</label>
+<div class="col-sm-3">
+<%= f.text_field  'requestscan', :class => 'form-control' %>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="form-group">
+<label for = "patient_typeofscan" class="control-label col-sm-2">Type of Scan:</label>
+<div class="col-sm-3">
+<%= f.text_field  'typeofscan', :class => 'form-control' %>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="form-group">
+<label for = "patient_appointmentdate" class="control-label col-sm-2">Appointment Date:</label>
+<div class="col-sm-3">
+<%= f.date_select  'appointmentdate', :class => 'form-control' %>
+</div>
+</div>
+
+<br>
+
+<div class="form-group">
+<label for = "patient_appointmenttime" class="control-label col-sm-2">Appointment Time:</label>
+<div class="col-sm-3">
+<%= f.time_select  'appointmenttime', :class => 'form-control' %>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="form-group">
+<div class="col-sm-offset-2 col-sm-10">
+<%= f.submit "Save changes", :class => 'btn btn-primary' %>
+</div>
+</div>
 
 
-<%= f.submit "Save changes" %>
 <% end %>
 
+<br>
+<br>
+
+
 <%= link_to 'Back', {:action => 'list' }, class: "btn btn-primary"%>
+
+</div>
+
