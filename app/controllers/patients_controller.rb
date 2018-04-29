@@ -3,15 +3,14 @@ before_action :authenticate_user!
 layout 'standard'
 
     def index
-        @search = Patient.search(params[:q])
-        @patients = @search.result
-        if params[:q].blank?
-            @patients = nil
-        end
     end
 
     def list
-        @patients = Patient.all
+        @search = Patient.search(params[:q])
+        @patients = @search.result
+        if params[:q].blank?
+            @patients = Patient.all
+        end
     end
 
     def show

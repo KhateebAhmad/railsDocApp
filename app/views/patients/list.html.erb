@@ -1,19 +1,26 @@
+<%= search_form_for @search, url: patients_list_path do |f| %>
+
+  <%= f.label :name_cont %>
+  <%= f.search_field :name_cont %>
+
+  <%= f.submit %>
+<% end %>
+
 <% if @patients.blank? %>
 <p>There are no patients in the system currently.</p>
 <% else %>
 <p>These are the current patients in the system</p>
 
 
-
 <table class="table">
   <tr>
-    <th>Name</th>
-    <th >Date of Birth</th>
-    <th >Address</th>
-    <th >Phone Number</th>
-    <th >Issue/Injury</th>
-    <th >Scan Requested</th>
-    <th >Type of Scan</th>
+    <th> <%= sort_link @search, :name, "Name"%></th>
+    <th> <%= sort_link @search, :dateofbirth, "Date of Birth"%></th>
+    <th>Address</th>
+    <th>Phone Number</th>
+    <th> <%= sort_link @search, :injury, "Issue/Injury"%></th>
+    <th> <%= sort_link @search, :requestscan, "Scan Requested"%></th>
+    <th> <%= sort_link @search, :typeofscan, "Type of Scan"%></th>
     <th >Doctor ID</th>
     <th >Doctor Contact Email</th>
     <th >Show</th>
