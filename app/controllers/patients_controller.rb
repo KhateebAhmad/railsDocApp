@@ -30,7 +30,7 @@ layout 'standard'
     end
 
     def patient_params
-       params.require(:patients).permit(:name, :dateofbirth, :address, :phonenumber, :injury, :requestscan, :typeofscan)
+       params.require(:patients).permit(:name, :dateofbirth, :address, :phonenumber, :injury, :requestscan, :typeofscan, :appointmentdate, :appointmenttime)
     end
 
     def edit
@@ -48,7 +48,7 @@ layout 'standard'
     end
 
     def patient_param
-        params.require(:patient).permit(:name, :dateofbirth, :address, :phonenumber, :injury, :requestscan, :typeofscan)
+        params.require(:patient).permit(:name, :dateofbirth, :address, :phonenumber, :injury, :requestscan, :typeofscan, :appointmentdate, :appointmenttime)
     end
 
     def delete

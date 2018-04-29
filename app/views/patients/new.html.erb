@@ -80,6 +80,26 @@
 <br>
 
 <div class="form-group">
+<label for = "patient_appointmentdate" class="control-label col-sm-1">Appointment Date:</label>
+<div class="col-sm-3">
+<%= date_select 'patients', 'appointmentdate', :class => 'form-control' %>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="form-group">
+<label for = "patient_appointmenttime" class="control-label col-sm-1">Appointment Time:</label>
+<div class="col-sm-3">
+<%= time_select 'patients', 'appointmenttime', :class => 'form-control' %>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="form-group">
 <div class="col-sm-offset-2 col-sm-10">
 <%= submit_tag "Create", :class => 'btn btn-primary'%>
 </div>

@@ -9,6 +9,9 @@
 <p>Injury: <%= f.text_area  'injury' %></p>
 <p>Request Scan: <%= f.text_field  'requestscan' %></p>
 <p>Type of Scan: <%= f.text_field  'typeofscan' %></p>
+<p>Appointment Date: <%= f.date_select  'appointmentdate' %></p>
+<p>Appointment Time: <%= f.time_select  'appointmenttime' %></p>
+
 
 <%= f.submit "Save changes" %>
 <% end %>

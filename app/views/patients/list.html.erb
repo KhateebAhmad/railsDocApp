@@ -21,6 +21,8 @@
     <th> <%= sort_link @search, :injury, "Issue/Injury"%></th>
     <th> <%= sort_link @search, :requestscan, "Scan Requested"%></th>
     <th> <%= sort_link @search, :typeofscan, "Type of Scan"%></th>
+    <th> <%= sort_link @search, :appointmentdate, "Appointment Date"%></th>
+    <th >Appointment Time</th>
     <th >Doctor ID</th>
     <th >Doctor Contact Email</th>
     <th >Show</th>
@@ -37,6 +39,8 @@
     <td ><%= patient.injury -%></td>
     <td ><%= patient.requestscan -%></td>
     <td><%= patient.typeofscan -%></td>
+    <td><%= patient.appointmentdate -%></td>
+    <td><%= patient.appointmenttime -%></td>
     <td><%= patient.user.id -%></td>
     <td><%= patient.user.email -%></td>
     <td><%= link_to 'Show', {:action => "show", :id => patient.id}, class: "btn btn-primary" %></td>
